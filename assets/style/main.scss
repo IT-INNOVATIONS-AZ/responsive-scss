@@ -1,0 +1,60 @@
+@import "./utils.scss";
+@import "./mixins.scss";
+
+// Variables
+$primary-color: #ffa62b;
+$secondary-color: #00a0c1;
+$secondary-color-2: #16697a;
+$background-gradient-1: linear-gradient(90deg, #d71489 100%, #004788 100%);
+%font {
+  font-family: "Montserrat", sans-serif;
+}
+.bg-container {
+  background-image: url(../../img/background.png);
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// Navigation
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 195px;
+  grid-area: 39px;
+  @include responsive(smartphone-portrait) {
+    padding: 36px 34px;
+  }
+  .menu-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 140px;
+    @include responsive(smartphone-portrait) {
+      gap: 32px;
+    }
+    .btn {
+      border: 0;
+      background-color: transparent;
+    }
+    .nav-wrapper {
+      display: flex;
+      gap: 18px;
+      .nav {
+        display: flex;
+        gap: 21px;
+        align-items: center;
+        @include responsive(smartphone-portrait) {
+          display: none;
+        }
+
+        &-item a {
+          text-decoration: none;
+          color: #fff;
+          @extend %font;
+        }
+      }
+    }
+  }
+}
