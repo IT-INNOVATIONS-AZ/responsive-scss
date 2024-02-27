@@ -10,7 +10,7 @@ $background-gradient-1: linear-gradient(90deg, #d71489 100%, #004788 100%);
   font-family: "Montserrat", sans-serif;
 }
 .bg-container {
-  background-image: url(../../img/background.png);
+  background-image: url(../img/background.png);
   height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
@@ -56,5 +56,14 @@ $background-gradient-1: linear-gradient(90deg, #d71489 100%, #004788 100%);
         }
       }
     }
+  }
+}
+
+.hero {
+  &-title {
+    @extend %font;
+    font-size: 58px;
+    font-weight: 700;
+    color: #fff;
   }
 }
